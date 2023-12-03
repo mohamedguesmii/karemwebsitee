@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: avenir;
+    src: url("../../public/fonts/avenir-arabic-medium.otf") format('otf');
+}
