@@ -5,17 +5,20 @@ import Mecca from "../../../public/images/imagebg.jpg";
 import BannerElement from "@/components/BannerElement";
 import { AiOutlineSearch } from "react-icons/ai";
 import IconComponent from "@/components/IconComponent";
-import IkamaImg from '../../../public/images/ikama.png'
-import PlaneImg from '../../../public/images/avion.png'
-import BayanatImg from '../../../public/images/bayanat.png'
-
+import IkamaImg from "../../../public/images/ikama.png";
+import PlaneImg from "../../../public/images/avion.png";
+import BayanatImg from "../../../public/images/bayanat.png";
+import ImageBanner from "@/components/ImageBanner";
+import TextBanner from "@/components/TextBanner";
+import Image1Banner from "@/components/Image1Banner";
+import Image2Banner from "@/components/Image2Banner";
 
 
 
 const HomePage = () => {
   return (
-    <div className="w-full h-screen">
-      <div className="w-full h-[60%] ">
+    <div className="w-full h-screen ">
+      <div className="w-full h-[60%]  ">
         <Image
           className="z-[-10]"
           src={Mecca}
@@ -23,7 +26,7 @@ const HomePage = () => {
           objectFit="cover"
         />
       </div>
-      <div className="w-full   flex mt-[-550px] justify-center">
+      <div className="w-full   flex absolute top-[50px] z-[-10] justify-center">
         <div className="w-full h-[500px] flex flex-col justify-center items-center">
           <h3 className="text-yellow-600 text-[2rem] font-bold font-avenir">
             كارم السياحية
@@ -32,7 +35,7 @@ const HomePage = () => {
             بوابتك إلى تجربة مميزة في البقاع المقدسة
           </h2>
 
-          <div className=" w-[1000px] p-2 bg-white rounded-3xl flex flex-row-reverse justify-around items-center">
+          <div className=" w-[1000px] p-2 bg-white rounded-3xl flex flex-row justify-around items-center">
             <BannerElement
               option={
                 <select>
@@ -100,26 +103,58 @@ const HomePage = () => {
             />
 
             <div className="w-11 h-11 bg-purple-950 rounded-lg flex justify-center items-center cursor-pointer">
-            <AiOutlineSearch size={24} color="white" />
-
+              <AiOutlineSearch size={24} color="white" />
             </div>
           </div>
         </div>
       </div>
 
       <div className="w-full h-[50%] bg-white flex flex-col items-center ">
-        <h3 className="text-black m-5 text-[2rem] font-bold">حجزكم <span className="text-purple-800">سهل و سريع</span></h3>
-       <div className="w-full flex flex-row justify-evenly m-10">
-      <IconComponent img={BayanatImg} title={"أدخل بياناتك"} description={"إملأ التفاصيل لإتمام الاجراءت"} />
-      <IconComponent img={IkamaImg} title={"إختر إقامتك"} description={"إختر فندقك لإقامة  مثالية"} />
-      <IconComponent img={PlaneImg} title={"إختر الوجهة"} description={"إستكشف خياراتك للسفر"} />
+        <h3 className="text-black m-5 text-[2rem] font-bold">
+          حجزكم <span className="text-purple-800">سهل و سريع</span>
+        </h3>
+        <div className="w-full flex flex-row justify-evenly m-10">
+          <IconComponent
+            img={BayanatImg}
+            title={"أدخل بياناتك"}
+            description={"إملأ التفاصيل لإتمام الاجراءت"}
+          />
+          <IconComponent
+            img={IkamaImg}
+            title={"إختر إقامتك"}
+            description={"إختر فندقك لإقامة  مثالية"}
+          />
+          <IconComponent
+            img={PlaneImg}
+            title={"إختر الوجهة"}
+            description={"إستكشف خياراتك للسفر"}
+          />
+        </div>
 
-       </div>
-   <div>
+        <div className="flex flex-row  items-center ">
+        <TextBanner />
+      <ImageBanner title='مكة المكرمة' description="إكتشف أفضل العروض"/>
 
-   </div>
       </div>
+
+      <div className="flex flex-row  items-center ">
+       
+      <Image1Banner title=' المدينة المنورة' description="إكتشف أفضل العروض"/>
+
+      </div>
+
+      <div className="flex flex-row  items-center ">
+       
+      <Image2Banner title=' جدة ' description="إكتشف أفضل العروض"/>
+
+      </div>
+
+
+      </div>
+  
+      
     </div>
+    
   );
 };
 

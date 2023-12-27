@@ -7,7 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-<<<<<<< HEAD
       colors: {
         primary: '#1D5B79',
         secondary: '#2EC0BB',
@@ -23,8 +22,6 @@ module.exports = {
       fontFamily: {
         avenir: ['avenir', 'sans'], // Replace 'YourFontFamily' with the actual font name
       },
-=======
->>>>>>> f6709ff (Initial commit from Create Next App)
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
