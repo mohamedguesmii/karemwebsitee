@@ -1,10 +1,13 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
+<<<<<<< HEAD
 import HomePage from './HomePage/page'
 import NavBar from './NavBar/page'
 
 
 
+=======
+>>>>>>> f6709ff (Initial commit from Create Next App)
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,10 +19,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+<<<<<<< HEAD
       <body className={inter.className}>
        <NavBar color='black' />
           {children}
           </body>
+=======
+      <body className={inter.className}>{children}</body>
+>>>>>>> f6709ff (Initial commit from Create Next App)
     </html>
   )
 }
